@@ -12,12 +12,12 @@ if (audiocanplay == false){
 }  
 </script>
 <style>
-	body { margin:0;background: transparent; color: #CCC; font: 16px/1.5 Avenir,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;}
+	body { margin:0;background: transparent; color: #000; font: 16px/1.5 Avenir,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;}
 	p{
     	margin: 0;
     }
     a{
-    	color: #ccc;
+    	color: #000;
     	text-decoration: none;
     	outline:none;
     }
@@ -61,7 +61,7 @@ text-transform: none;
 	.circle-percent { display: inline-block; position: relative; margin: 15px;  padding: 60px 0; width: 150px; height: 30px; line-height: 1; text-align: center; }
     /*.circle-percent:before { position: relative; z-index: 3; content:''; }*/
     .circle-percent:after, .circle-percent>div:first-child, .circle-percent>div:last-child, .circle-percent>div:first-child:after, .circle-percent>div:last-child:after { position: absolute; width: 50%; height: 100%; top: 0; left: 0; }
-    .circle-percent:after { content: ""; background: #333; }
+    .circle-percent:after { content: ""; background: #FFF; }
     .circle-percent>div:first-child, .circle-percent>div:last-child { width: 100%; }
     .circle-percent>div:first-child { z-index: 2; }
     .circle-percent>div:first-child:after, .circle-percent>div:last-child:after { content: ""; background: url("/static/circle.png") no-repeat 0 0; background-size: auto 100%; }
@@ -71,7 +71,7 @@ text-transform: none;
     	width: 420px;
     	height: 180px;
     	margin: 0px auto;
-    	background: #333;
+    	background: #FFF;
     	border-radius: 15px;
     }
     #pic{
@@ -84,13 +84,13 @@ text-transform: none;
     	background-size: cover;
     	border-radius: 50%;
     	z-index: 3;
-		-webkit-animation: pic 15s linear infinite;
-		-moz-animation: pic 15s linear infinite;
-		-ms-animation: pic 15s linear infinite;
-		-o-animation: pic 15s linear infinite;
-		animation: pic 15s linear infinite;
-		-webkit-animation-play-state: paused;
-		animation-play-state: paused;
+        -webkit-animation: pic 15s linear infinite;
+           -moz-animation: pic 15s linear infinite;
+            -ms-animation: pic 15s linear infinite;
+             -o-animation: pic 15s linear infinite;
+                animation: pic 15s linear infinite;
+        -webkit-animation-play-state: paused;
+                animation-play-state: paused;
     }
      @-webkit-keyframes pic {  
      from {  
