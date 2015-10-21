@@ -1,14 +1,14 @@
 ##HTML5 网页音乐播放器
 
-基于 Flask 框架搭建的一个播放器，音乐源来自虾米、网易云音乐。
+基于 Flask 框架搭建的一个播放器，音乐源来自虾米、网易云音乐。  基于http://musicbox.coding.io/ 修改。
 
 程序运行环境需要自行修改配置。
 
 ###演示
 虾米播放器（推荐）：  
-http://musicbox.coding.io/xiamiplayer/1773447486  
+http://rpmusic.coding.io/xiamiplayer/1773447486  
 网易云音乐播放器（备用）：  
-http://musicbox.coding.io/m163player/28798601
+http://rpmusic.coding.io/m163player/28798601
 
 ###使用
 **推荐使用虾米源，没有防盗链。如果歌曲在虾米找不到，再使用网易云音乐。**
