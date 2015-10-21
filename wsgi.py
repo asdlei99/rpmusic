@@ -24,7 +24,7 @@ def before_request():
 
 @app.route('/')
 def index():
-    return redirect('http://miantiao.me/', code=301)
+    return redirect('http://www.72blog.com/', code=301)
 
 @app.route('/xiami/<id>.mp3')
 def xiami(id):
