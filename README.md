@@ -7,6 +7,7 @@
 ###演示
 虾米播放器（推荐）：  
 http://rpmusic.coding.io/xiamiplayer/394307
+
 网易云音乐播放器（备用）：  
 http://rpmusic.coding.io/m163player/5046367
 
@@ -14,10 +15,10 @@ http://rpmusic.coding.io/m163player/5046367
 **推荐使用虾米源，没有防盗链。如果歌曲在虾米找不到，再使用网易云音乐。**
 
 虾米播放器（推荐）：  
-`<iframe src="http://musicbox.coding.io/xiamiplayer/63608" frameborder="0" scrolling="0" width="430" height="200" allowtransparency></iframe>`
+`<iframe src="http://rpmusic.coding.io/xiamiplayer/394307" frameborder="0" scrolling="0" width="100%" height="200" allowtransparency></iframe>`
 
 网易云音乐播放器（备用）：  
-`<iframe src="http://musicbox.coding.io/m163player/28815250" frameborder="0" scrolling="0" width="430" height="200" allowtransparency></iframe>`
+`<iframe src="http://rpmusic.coding.io/m163player/5046367" frameborder="0" scrolling="0" width="100%" height="200" allowtransparency></iframe>`
 
 ###搭建方法
 
