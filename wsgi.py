@@ -55,8 +55,8 @@ def xiamidecode(location):
                         ''.join([result[r][-1] for r in range(remainder)])).replace('^','0')
     return url
 
-@app.route('/xiamip/<id>')
-def xiamip(id):
+@app.route('/xiamiplayer/<id>')
+def xiamiplayer(id):
     ua = user_agent_parser.Parse(request.headers.get('User-Agent'))
     try:
         version = int(ua['user_agent'].get('major'))
