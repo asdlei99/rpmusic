@@ -194,14 +194,14 @@ var _hmt = _hmt || [];
 <div class="circle-percent"></div>
 <div id="pic"></div>
 <div class="info">
-    <p class="title"><i class="flaticon-musical7"></i><a href="http://www.auto.com/song/{{id}}" title="{{title}}">{{title}}</a></p>
+    <p class="title"><i class="flaticon-musical7"></i><a href="http://www.xiami.com/song/{{id}}" title="{{title}}">{{title}}</a></p>
     <p class="singer"><i class="flaticon-artist"></i>{{singer}}</p>
 </div>
 <div id="lyric">{{title}}</div>
 <div class="control">
 <a href="javascript:void(0)" id="play" title="播放/暂停"><i class="flaticon-play43"></i></a>
+<a href="http://widget.weibo.com/dialog/PublishWeb.php?app_src=6coOUz&button=publish&default_text=我正在听 {{singer}} 的《{{title}}》，你也来听听吧! http://rpmusic.coding.io/xiamiplayer/{{id}}&default_image={{songpic}}" title="分享 {{title}} 到新浪微博" target="_blank"><i class="flaticon-share6"></i></a>
 <a href="{{songurl}}" download="{{title}}" title="下载 {{title}}"><i class="flaticon-cloud136"></i></a> 
-<a href="http://widget.weibo.com/dialog/PublishWeb.php?app_src=6coOUz&button=publish&default_text=我正在听 {{singer}} 的《{{title}}》，你也来听听吧! http://rpmusic.coding.io/xiami/{{id}} &default_image={{songpic}}" title="分享 {{title}} 到新浪微博" target="_blank"><i class="flaticon-share6"></i></a>
 </div>
 </div>
 <audio src="{{songurl}}" preload="auto"></audio>
@@ -326,3 +326,4 @@ lyric = parseLyric(text);
 </script>
 </body>
 </html>
+
