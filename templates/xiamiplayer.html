@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>{{title}} - 虾米音乐播放器</title>
-<meta name="author" content="72blog.com" />
+<meta name="author" content="miantiao.me" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 <script>
 var audiocanplay = !!document.createElement("audio").canPlayType;
@@ -12,12 +12,12 @@ if (audiocanplay == false){
 }  
 </script>
 <style>
-	body { margin:0;background: transparent; color: #000; font: 16px/1.5 Avenir,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;}
-	p{
+    body { margin:0;background: transparent; color: #CCC; font: 16px/1.5 Avenir,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;}
+    p{
     	margin: 0;
     }
     a{
-    	color: #000;
+    	color: #ccc;
     	text-decoration: none;
     	outline:none;
     }
@@ -58,10 +58,10 @@ text-transform: none;
 .flaticon-share6:before {
     content: "\e005";
 }
-	.circle-percent { display: inline-block; position: relative; margin: 15px;  padding: 60px 0; width: 150px; height: 30px; line-height: 1; text-align: center; }
+    .circle-percent { display: inline-block; position: relative; margin: 15px;  padding: 60px 0; width: 150px; height: 30px; line-height: 1; text-align: center; }
     /*.circle-percent:before { position: relative; z-index: 3; content:''; }*/
     .circle-percent:after, .circle-percent>div:first-child, .circle-percent>div:last-child, .circle-percent>div:first-child:after, .circle-percent>div:last-child:after { position: absolute; width: 50%; height: 100%; top: 0; left: 0; }
-    .circle-percent:after { content: ""; background: #FFF; }
+    .circle-percent:after { content: ""; background: #333; }
     .circle-percent>div:first-child, .circle-percent>div:last-child { width: 100%; }
     .circle-percent>div:first-child { z-index: 2; }
     .circle-percent>div:first-child:after, .circle-percent>div:last-child:after { content: ""; background: url("/static/circle.png") no-repeat 0 0; background-size: auto 100%; }
@@ -71,7 +71,7 @@ text-transform: none;
     	width: 420px;
     	height: 180px;
     	margin: 0px auto;
-    	background: #FFF;
+    	background: #333;
     	border-radius: 15px;
     }
     #pic{
@@ -178,7 +178,6 @@ text-transform: none;
     audio{
     	display: none;
     } 
-
 </style>
 <script>
 var _hmt = _hmt || [];
@@ -195,14 +194,14 @@ var _hmt = _hmt || [];
 <div class="circle-percent"></div>
 <div id="pic"></div>
 <div class="info">
-	<p class="title"><i class="flaticon-musical7"></i><a href="http://www.xiami.com/song/{{id}}" title="{{title}}">{{title}}</a></p>
-	<p class="singer"><i class="flaticon-artist"></i>{{singer}}</p>
+    <p class="title"><i class="flaticon-musical7"></i><a href="http://www.xiami.com/song/{{id}}" title="{{title}}">{{title}}</a></p>
+    <p class="singer"><i class="flaticon-artist"></i>{{singer}}</p>
 </div>
 <div id="lyric">{{title}}</div>
 <div class="control">
 <a href="javascript:void(0)" id="play" title="播放/暂停"><i class="flaticon-play43"></i></a>
-<a href="http://widget.weibo.com/dialog/PublishWeb.php?app_src=6coOUz&button=publish&default_text=我正在听 {{singer}} 的《{{title}}》，你也来听听吧! http://rpmusic.coding.io/xiamiplayer/{{id}}&default_image={{songpic}}" title="分享 {{title}} 到新浪微博" target="_blank"><i class="flaticon-share6"></i></a>
 <a href="{{songurl}}" download="{{title}}" title="下载 {{title}}"><i class="flaticon-cloud136"></i></a> 
+<a href="http://widget.weibo.com/dialog/PublishWeb.php?app_src=6coOUz&button=publish&default_text=我正在听 {{singer}} 的《{{title}}》，你也来听听吧! http://www.xiami.com/song/{{id}} &default_image={{songpic}}" title="分享 {{title}} 到新浪微博" target="_blank"><i class="flaticon-share6"></i></a>
 </div>
 </div>
 <audio src="{{songurl}}" preload="auto"></audio>
@@ -277,42 +276,37 @@ function parseLyric(text) {
     });
     return result;
 }
-
 function changeState(state) {
-	document.getElementById("pic").style.animationPlayState = state;
-	document.getElementById("pic").style.webkitAnimationPlayState = state; // Webkit Prefix
+    document.getElementById("pic").style.animationPlayState = state;
+    document.getElementById("pic").style.webkitAnimationPlayState = state; // Webkit Prefix
 }
-
 var audio = document.getElementsByTagName('audio')[0];
 var lyricContainer = document.getElementById('lyric');
 audio.addEventListener('timeupdate', function(e) {
-	percent = (this.currentTime / this.duration) * 100;
-	circlePercent(percent);
-	for (var i = 0, l = lyric.length; i < l; i++) {
+    percent = (this.currentTime / this.duration) * 100;
+    circlePercent(percent);
+    for (var i = 0, l = lyric.length; i < l; i++) {
         if (this.currentTime > lyric[i][0]) {
             lyricContainer.textContent = lyric[i][1];
             if (lyric[i][1] !== ''){
-				document.title = lyric[i][1];
-			}else{
-			    document.title = '{{title}} - 虾米音乐播放器';
-			};
+                document.title = lyric[i][1];
+            }else{
+                document.title = '{{title}} - 虾米音乐播放器';
+            };
         };
     };
 },false);
-
 audio.addEventListener('error', function(e) {
   document.getElementById("play").innerHTML = '<i class="flaticon-play43"></i>';
   changeState("paused");
   play= false;
 },false);
-
 audio.addEventListener('ended', function(e) {
   document.getElementById("play").innerHTML = '<i class="flaticon-play43"></i>';
   changeState("paused");
   play= false;
   circlePercent(0);
 },false);
-
 var play= false;
 document.getElementById("play").onclick=function(){
     if (play==false){
@@ -328,8 +322,8 @@ document.getElementById("play").onclick=function(){
         play= false;
     }
 };
-
 lyric = parseLyric(text);
 </script>
 </body>
 </html>
+
