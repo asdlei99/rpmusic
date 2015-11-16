@@ -9,9 +9,7 @@ import json
 import requests
 from ua_parser import user_agent_parser
 import xmltodict
-
 application = app = Flask(__name__)
-
 @app.before_request
 def before_request():
     headers = request.headers
@@ -21,11 +19,9 @@ def before_request():
         return '自己去虾米抓数据 http://www.xiami.com/app/iphone/song/id/123 123换成ID'
     if 'wget' in headers.get('User-Agent'):
         return '自己去虾米抓数据 http://www.xiami.com/app/iphone/song/id/123 123换成ID'
-
 @app.route('/')
 def index():
-    return redirect('http://www.72blog.com/', code=301)
-
+    return redirect('http://miantiao.me/', code=301)
 @app.route('/xiami/<id>.mp3')
 def xiami(id):
     headers = {'User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X; en-us) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53',
@@ -45,7 +41,6 @@ def xiami(id):
         return '获取歌词信息失败，请检查是否有该歌曲ID'
     songurl=xiamidecode(songurl)
     return redirect(songurl, code=303)
-
 def xiamidecode(location):
     num = int(location[0])
     avg_len, remainder = int(len(location[1:]) / num), int(len(location[1:]) % num)
@@ -54,8 +49,7 @@ def xiamidecode(location):
     url = urllib.unquote(''.join([''.join([result[j][i] for j in range(num)]) for i in range(avg_len)]) + \
                         ''.join([result[r][-1] for r in range(remainder)])).replace('^','0')
     return url
-
-@app.route('/xiami/<id>')
+@app.route('/xiamiplayer/<id>')
 def xiamiplayer(id):
     ua = user_agent_parser.Parse(request.headers.get('User-Agent'))
     try:
@@ -94,7 +88,6 @@ def xiamiplayer(id):
     except:
         lyric = "[00:00.00]" + title
     return render_template('xiamiplayer.html',songurl=songurl,songpic=songpic,title=title,singer=singer,lyric=lyric,id=id)
-
 @app.route('/m163/<id>.mp3')
 def m163(id):
     headers = {
@@ -121,7 +114,6 @@ def m163(id):
         return '获取歌词信息失败，请检查是否有该歌曲ID'
     songurl=info['songs'][0].get('mp3Url','http://miantiao.me').replace('http://m','http://p')
     return redirect(songurl, code=303)
-
 @app.route('/m163player/<id>')
 def m163player(id):
     headers = {
@@ -171,7 +163,6 @@ def m163player(id):
     except:
         lyric = "[00:00.00]" + title
     return render_template('m163player.html',songurl=songurl,songpic=songpic,title=title,singer=singer,lyric=lyric,id=id,singerid=singerid)
-
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0',debug=True)
+
