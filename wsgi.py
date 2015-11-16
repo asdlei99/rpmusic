@@ -93,7 +93,7 @@ def xiamiplayer(id):
         lyric = lyric.replace('''\'''',''' \\\' ''').replace('\n','#').replace('\r','').replace('######','#').replace('######','#').replace('####','#').replace('###','#').replace('##','#')
     except:
         lyric = "[00:00.00]" + title
-    return render_template('xiami.html',songurl=songurl,songpic=songpic,title=title,singer=singer,lyric=lyric,id=id)
+    return render_template('xiamiplayer.html',songurl=songurl,songpic=songpic,title=title,singer=singer,lyric=lyric,id=id)
 
 @app.route('/m163/<id>.mp3')
 def m163(id):
