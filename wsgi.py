@@ -21,7 +21,7 @@ def before_request():
         return '自己去虾米抓数据 http://www.xiami.com/app/iphone/song/id/123 123换成ID'
 @app.route('/')
 def index():
-    return redirect('http://miantiao.me/', code=301)
+    return redirect('http://www.72blog.com/', code=301)
 @app.route('/xiami/<id>.mp3')
 def xiami(id):
     headers = {'User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X; en-us) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53',
