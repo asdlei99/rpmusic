@@ -6,7 +6,7 @@
 
 ###演示
 虾米播放器（推荐）：  
-http://rpmusic.coding.io/xiamiplayer/84293
+http://rpmusic.coding.io/xiamiplayer/377412
 
 网易云音乐播放器（备用）：  
 http://rpmusic.coding.io/m163player/5046367
