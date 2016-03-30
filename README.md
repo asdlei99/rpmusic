@@ -10,7 +10,7 @@ http://rpmusic.coding.io/xiamiplayer/377412
 
 网易云音乐播放器（备用）：  
 http://rpmusic.coding.io/m163player/5046367
-（演示地址最后数字为网易或者虾米歌曲id，，你可以在其网站找到   例如：http://music.163.com/#/song?id=28793502  对应外链地址为http://rpmusic.coding.io/m163player/28793502）
+（演示地址最后数字为网易或者虾米歌曲id，，你可以在其网站找到   例如：http://music.163.com/#/song?id=28793502  对应外链地址为http://rpmusic.coding.io/m163player/28793502 ）
 ###使用
 **推荐使用虾米源，没有防盗链。如果歌曲在虾米找不到，再使用网易云音乐。**
 
