@@ -5,6 +5,8 @@
 程序运行环境需要自行修改配置。
 
 ###演示
+fm演示：演示： http://fm.rpsofts.com/ 
+
 虾米播放器（推荐）：  
 http://rpmusic.coding.io/xiamiplayer/377412
 
