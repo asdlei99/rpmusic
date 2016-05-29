@@ -5,7 +5,9 @@
 程序运行环境需要自行修改配置。（演示页面，搭建于coding，现已失效，，如有需要请自行部署）
 
 ###演示
-fm演示：演示： http://fm.rpsofts.com/ 
+fm演示：演示： http://fm.rpsofts.com/   (演示服务器已经关闭，如有需要请自行搭建。)
+
+<img src="http://cdn.rpsofts.com/o_1ajuavpegi79r9soti65v78ma.jpg" alt="o_1ajuavpegi79r9soti65v78ma.jpg" > 
 
 虾米播放器（推荐）：  
 http://rpmusic.coding.io/xiamiplayer/377412
