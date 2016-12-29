@@ -4,6 +4,15 @@
 
 程序运行环境需要自行修改配置。（演示页面，搭建于coding，现已失效，，如有需要请自行部署）
 
+这个已经不在更新，，，换http://www.tung.bid/263/
+
+使用方法
+`http://www.tung.bid/263/index.php?type=playlist&id=33137512`
+`type为网易云音乐类型，单曲songs 专辑 album 歌单 playlist 电台 radio，，id则不用多说`
+
+
+
+
 ###演示
 fm演示：演示： http://fm.rpsofts.com/   (演示服务器已经关闭，如有需要请自行搭建。)
 
